@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mojito",
+    "name": "モヒート",
+    "category": "Rum",
+    "ingredients": ["ラム", "ライム", "ミント", "ソーダ", "シュガー"],
+    "tags": ["さっぱり", "ハーブ", "柑橘", "炭酸"],
+    "note": "ミントの清涼感。暑い日に。",
+    "image": "images/mojito.png"
+  },
+  {
+    "id": "negroni",
+    "name": "ネグローニ",
+    "category": "Gin",
+    "ingredients": ["ジン", "カンパリ", "スイートベルモット"],
+    "tags": ["ビター", "大人", "濃いめ", "香り"],
+    "note": "苦味と甘味のバランス。",
+    "image": "images/negroni.png"
+  }
+]

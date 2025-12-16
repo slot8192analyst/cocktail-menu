@@ -1,0 +1,25 @@
+:root { --border:#e5e7eb; --text:#111827; --muted:#6b7280; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--text); }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 16px; }
+h1 { margin: 8px 0 16px; }
+
+.controls { display:flex; gap:10px; flex-wrap: wrap; align-items:center; }
+.controls input, .controls select { padding:10px; border:1px solid var(--border); border-radius:10px; }
+.controls input { flex: 1; min-width: 240px; }
+.controls button { padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:#fff; cursor:pointer; }
+
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.chip { padding:6px 10px; border:1px solid var(--border); border-radius: 999px; background:#fff; cursor:pointer; font-size: 14px; }
+.chip.active { background:#111827; color:#fff; border-color:#111827; }
+
+.count { color:var(--muted); margin: 12px 0; }
+
+.grid { display:grid; gap:12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.card { border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#fff; }
+.card img { width:100%; height: 180px; object-fit: cover; display:block; background:#f3f4f6; }
+.card .pad { padding:12px; }
+.card h2 { font-size: 18px; margin:0 0 6px; }
+.meta { color:var(--muted); font-size: 13px; }
+.tags { margin-top:8px; display:flex; flex-wrap:wrap; gap:6px; }
+.tag { font-size: 12px; padding: 4px 8px; border:1px solid var(--border); border-radius: 999px; color: #374151; }
