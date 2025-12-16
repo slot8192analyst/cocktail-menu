@@ -6,7 +6,7 @@
     "ingredients": ["ラム", "ライム", "ミント", "ソーダ", "シュガー"],
     "tags": ["さっぱり", "ハーブ", "柑橘", "炭酸"],
     "note": "ミントの清涼感。暑い日に。",
-    "image": "images/mojito.png"
+    "image": "images/white.png"
   },
   {
     "id": "negroni",
@@ -15,6 +15,6 @@
     "ingredients": ["ジン", "カンパリ", "スイートベルモット"],
     "tags": ["ビター", "大人", "濃いめ", "香り"],
     "note": "苦味と甘味のバランス。",
-    "image": "images/negroni.png"
+    "image": "images/yellow.png"
   }
 ]
