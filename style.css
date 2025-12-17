@@ -83,16 +83,8 @@ h1{
 .card .meta{ font-size: 13px; line-height: 1.35; }
 .tag{ font-size: 12px; }
 
-/* タブレットくらい */
-@media (max-width: 900px){
-    .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .card h2{ font-size: 16px; }
-  .card .meta{ font-size: 12px; }
-  .tag{ font-size: 11px; }
-}
-
 /* スマホくらい */
-@media (max-width: 560px){
+@media (max-width: 375px){
   .grid{grid-template-columns: repeat(2,minmax(0,1fr));}
   .wrap{ padding: 14px 20px;}
   .card h2{ font-size: 15px; }
