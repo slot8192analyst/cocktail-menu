@@ -29,12 +29,12 @@ function normalize(s) {
 }
 
 function searchableText(item) {
-  // ここが「味の雰囲気検索」の中心（tagsを入れている）
   return normalize([
     item.name,
     item.category,
     (item.ingredients || []).join(" "),
-    (item.tags || []).join(" "),
+    (item.taste || []).join(" "),
+    (item.mood || []).join(" "),
     item.note
   ].join(" "));
 }
@@ -46,7 +46,7 @@ function matches(item) {
   // タグは「選択したタグを全て含む」(AND)
   // ORにしたい場合はここを変えます
   for (const t of state.activeTags) {
-    if (!(item.tags || []).includes(t)) return false;
+    if (!(item.taste || []).includes(t)) return false;
   }
 
   if (!q) return true;
@@ -65,10 +65,10 @@ function render() {
         ${item.image ? `<img src="${item.image}" alt="${item.name}" loading="lazy" />` : ""}
         <div class="pad">
           <h2>${item.name}</h2>
-          <div class="meta">${catLabel} / ${(item.ingredients || []).join("・")}</div>
+          <div class="meta">${catLabel}</div>
           ${item.note ? `<div class="meta" style="margin-top:6px;">${item.note}</div>` : ""}
           <div class="tags">
-            ${(item.tags || []).map(t => `<span class="tag">${t}</span>`).join("")}
+            ${(item.taste || []).map(t => `<span class="tag">${t}</span>`).join("")}
           </div>
         </div>
       </article>
@@ -108,7 +108,7 @@ async function main() {
   state.data = await res.json();
 
   state.allCategories = [...new Set(state.data.map(x => x.category).filter(Boolean))].sort();
-  state.allTags = [...new Set(state.data.flatMap(x => x.tags || []))].sort();
+  state.allTags = [...new Set(state.data.flatMap(x => x.taste || []))].sort();
 
   renderCategories();
   renderTags();

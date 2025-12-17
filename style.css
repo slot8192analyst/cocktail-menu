@@ -7,7 +7,7 @@
   --line2:#2a2a2a;  /* うすい境界 */
 }
 
-body{
+body, button, input, select, textarea{
   margin:0;
   background:var(--bg);
   color:var(--text);
@@ -61,6 +61,8 @@ h1{
   background: transparent;
   color: var(--text);
   border: 1px solid var(--line2);
+  font-size: 14px;
+  letter-spacing: .04em;
 }
 .chip.active{
   background: var(--line);
@@ -76,6 +78,25 @@ h1{
 }
 .card h2{ color: var(--text); }
 .meta{ color: var(--muted); }
+/* 基本サイズ（PC） */
+.card h2{ font-size: 18px; line-height: 1.25; }
+.card .meta{ font-size: 13px; line-height: 1.35; }
+.tag{ font-size: 12px; }
+
+/* タブレットくらい */
+@media (max-width: 900px){
+  .card h2{ font-size: 16px; }
+  .card .meta{ font-size: 12px; }
+  .tag{ font-size: 11px; }
+}
+
+/* スマホくらい */
+@media (max-width: 560px){
+  .card h2{ font-size: 15px; }
+  .card .meta{ font-size: 12px; }
+  .tag{ font-size: 11px; }
+}
+
 
 .tag{
   color: var(--text);
